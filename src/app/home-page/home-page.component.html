@@ -1,0 +1,35 @@
+<!-- carousel banner -->
+<p-carousel
+  [value]="carouselItems"
+  [numVisible]="1"
+  [circular]="true"
+  [autoplayInterval]="3000"
+  [responsiveOptions]="responsiveOptions"
+  [style]="{ height: '80vh' }"
+>
+  <ng-template let-item pTemplate="item" >
+    <div class="flex justify-content-center align-items-center" >
+      <img [src]="item.imageSource" alt="{{ item.alt }}" class="fluid"  />
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <div class="p-carousel-header p-d-flex p-jc-between p-ai-center">
+
+    </div>
+  </ng-template>
+</p-carousel>
+
+<!-- footer sitemap -->
+<div class="footer">
+  <div class="grid grid-nogutter">
+    <div class="p-col">
+      <h4>Site Map</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

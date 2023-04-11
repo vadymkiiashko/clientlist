@@ -1,0 +1,25 @@
+<div
+  class="flex-initial flex align-items-center justify-content-between align-items-stretch"
+>
+  <div
+    class="flex-grow-1 flex-initial flex align-items-center justify-content-start p-2 align-items-stretch"
+  >
+    <a routerLink="/" class="pr-2 p-mr-3 p-button p-button-primary">Home</a>
+    <a routerLink="/customers" class="pr-2 p-mr-3 p-button p-button-primary"
+      >Customers</a
+    >
+  </div>
+  <div class="flex">
+    <a href="#" class="p-button p-button-primary">Login</a>
+    <a href="#" class="p-button p-button-primary">Sign up</a>
+  </div>
+</div>
+
+<p-tabView>
+  <p-tabPanel
+    *ngFor="let item of items"
+    header="{{ item.lable.toUpperCase() }}"
+    (click) = "navigate(item.path)"
+  >
+  </p-tabPanel>
+</p-tabView>

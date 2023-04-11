@@ -1,0 +1,8 @@
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div *ngFor="let prop of customerProperties">
+      <label for="{{prop}}">{{prop}}</label>
+      <input id="{{prop}}" type="text" formControlName="{{prop}}">
+    </div>
+    <button type="submit">Update</button>
+  </form>
+  

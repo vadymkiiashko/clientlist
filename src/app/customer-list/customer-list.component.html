@@ -5,13 +5,13 @@
         <h5>{{ customer.name }}</h5>
         <div>
           <p-button
-            
             type="button"
             icon="pi pi-bars"
             (click)="showMenu($event, customer)"
             styleClass="p-button-sm"
           ></p-button>
           <p-menu #cm [model]="menuItems" [popup]="true"></p-menu>
+         
         </div>
       </div>
       <div class="p-card-body">

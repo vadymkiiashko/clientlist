@@ -8,12 +8,24 @@ import { MenuModule } from 'primeng/menu';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonModule } from 'primeng/button';
+import { HomePageComponent } from './home-page/home-page.component';
+import { HeaderComponent } from './header/header.component';
+import { CarouselModule } from 'primeng/carousel';
+import { PaginatorModule } from 'primeng/paginator';
+import { TabViewModule } from 'primeng/tabview';
+import { CustomerFormComponent } from './customer-details/customer-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerListComponent
+    CustomerListComponent,
+    HomePageComponent,
+    HeaderComponent,
+    CustomerFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -21,7 +33,11 @@ import { ButtonModule } from 'primeng/button';
     MenuModule,
     ContextMenuModule,
     ButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule,
+    PaginatorModule,
+    TabViewModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

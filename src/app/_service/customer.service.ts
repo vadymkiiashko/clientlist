@@ -21,9 +21,13 @@ export class CustomerService {
 
   getMenuItems(): Observable<MenuItem[]> {
     return of([
-      { label: 'Edit', icon: 'pi pi-pencil', routerLink: [] },
+      { label: 'Edit', icon: 'pi pi-pencil', routerLink: ['../','customers'] },
       { label: 'Delete', icon: 'pi pi-trash', routerLink: [] },
       { label: 'Details', icon: 'pi pi-info-circle', routerLink: [] },
     ]);
+  }
+
+  updateCustomer(customer : any) {
+    console.log(customer)
   }
 }

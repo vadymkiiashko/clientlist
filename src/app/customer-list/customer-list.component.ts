@@ -31,7 +31,7 @@ export class CustomerListComponent implements OnInit {
   
   showMenu(event: MouseEvent, customer: Customer) {
     console.log(customer.number)
-    this.menuItems.forEach(item => (item.routerLink = ['/customers', customer.number]));
+    this.menuItems.forEach(item => (item.routerLink = ['home']));
     if (this.cm) {
       this.cm.toggle(event);
     }
