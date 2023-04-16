@@ -11,7 +11,6 @@
             styleClass="p-button-sm"
           ></p-button>
           <p-menu #cm [model]="menuItems" [popup]="true"></p-menu>
-         
         </div>
       </div>
       <div class="p-card-body">
@@ -22,3 +21,35 @@
     </div>
   </div>
 </div>
+
+
+<p-accordion>
+  <p-accordionTab
+    header="Header 1"
+    [headerStyle]="{ color: 'red', 'background-color': 'yellow' }"
+  >
+
+  
+  </p-accordionTab>
+  <p-accordionTab header="Header 2" [headerStyle]="{ color: 'blue' }">
+    content
+  </p-accordionTab>
+</p-accordion>
+<button
+  pButton
+  type="button"
+  label="Show Menu"
+  (click)="menu.toggle($event)"
+></button>
+<p-menu #menu [popup]="true"> </p-menu>
+
+
+<form [formGroup]="searchForm" (ngSubmit)="search()">
+  <div>
+    <input type="text" formControlName="country" placeholder="Country">
+    <input type="text" formControlName="city" placeholder="City">
+    <input type="text" formControlName="turnover" placeholder="Turnover">
+    <button type="submit">Search</button>
+    <button type="button" (click)="reset()">Reset</button>
+  </div>
+</form>

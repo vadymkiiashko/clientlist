@@ -14,9 +14,10 @@ import { CarouselModule } from 'primeng/carousel';
 import { PaginatorModule } from 'primeng/paginator';
 import { TabViewModule } from 'primeng/tabview';
 import { CustomerFormComponent } from './customer-details/customer-details.component';
+import { AccordionModule } from 'primeng/accordion';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomePageComponent,
     HeaderComponent,
     CustomerFormComponent,
-    
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,9 +38,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CarouselModule,
     PaginatorModule,
     TabViewModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AccordionModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
